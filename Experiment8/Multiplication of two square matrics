@@ -1,0 +1,22 @@
+n=int(input("dimension: ").strip())
+
+print("first matrix:")
+mat1=[]
+for _ in range (n):
+	mat1.append(list(map(int,input().split())))
+
+print("second matrix:")
+mat2=[]
+for _ in range(n):
+	mat2.append(list(map(int,input().split())))
+
+result=[[0 for _ in range(n)]for _ in range(n)]
+
+for i in range (n):
+	for j in range(n):
+		for k in range(n):
+			result[i][j]+=mat1[i][k]*mat2[k][j]
+
+print("Resultant Matrix:")
+for row in result:
+	print(*(row))
