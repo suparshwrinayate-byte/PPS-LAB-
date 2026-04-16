@@ -1,0 +1,33 @@
+	def __init__(self):
+		self.real = 0
+		self.imag = 0
+
+	def initComplex(self):
+		line = input().split()
+		if line:
+			self.real = int(line[0])
+			self.imag = int(line[1])
+
+	def sum(self, c1, c2):
+		self.real = c1.real + c2.real
+		self.imag = c1.imag + c2.imag
+
+	def display(self):
+				# Display in correct format
+		if self.imag >= 0:
+			print(f"{self.real} + {self.imag}i")
+		else:
+			print(f"{self.real} - {abs(self.imag)}i")
+
+# Create three instances
+c1 = Complex()
+c2 = Complex()
+c3 = Complex()
+
+# Initialize two complex numbers
+c1.initComplex()
+c2.initComplex()
+
+# Compute and display sum
+c3.sum(c1, c2)
+c3.display()
