@@ -1,0 +1,35 @@
+class Car:
+	def __init__(self, brand, price, model, color):
+		self.brand = brand
+		self.price = price
+		self.model = model
+		self.color = color
+	def display_details(self):
+		pass
+class Car1(Car):
+	def display_details(self):
+		print(self.brand)
+		print(self.price)
+		print(self.model)
+		print(self.color)
+class Car2(Car):
+	def display_details(self):
+		print(self.brand)
+		print(self.price)
+		print(self.model)
+		print(self.color
+
+# Read input
+car1_data = input().split()
+brand1, price1, model1, color1 = car1_data[0], float(car1_data[1]), car1_data[2], car1_data[3]
+
+car2_data = input().split()
+brand2, price2, model2, color2 = car2_data[0], float(car2_data[1]), car2_data[2], car2_data[3]
+
+# Create objects
+car1 = Car1(brand1, price1, model1, color1)
+car2 = Car2(brand2, price2, model2, color2)
+
+# Display details
+car1.display_details()
+car2.display_details()
